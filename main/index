@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="dist/sakura.css" />
+<style>
+  body,
+  html {
+    background: rgb(255, 255, 255);
+    text-align: center;
+    height: 150vh;
+  }
+
+  /* Center piece */
+  .svg-wrapper {
+    position: fixed;
+    top: 49%;
+    left: 25%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 800px;
+  }
+
+  .shape {
+    stroke-dasharray: 182 560;
+    stroke-dashoffset: 20;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke: #000;
+    border-bottom: 3px solid black;
+    position: fixed;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  }
+
+  .text {
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: #000;
+    top: 16px;
+    left: 75px;
+    position: fixed;
+  }
+
+  .svg-wrapper:hover .shape {
+    stroke-width: .5px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1500;
+    position: absolute;
+  }
+
+  /* Flowers decoration */
+  #flowers {
+    position: fixed;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top: -20px;
+    right: -50px;
+    height: auto;
+    width: auto;
+  }
+
+  #flowers1 {
+    position: fixed;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    bottom: -30px;
+    left: 0px;
+    height: auto;
+    width: auto;
+  }
+
+  /* Link to portfolio */
+  .link {
+    color: #000000;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .link:hover {
+    color: pink;
+  }
+
+</style>
+
+<body>
+  <script src="dist/sakura.js" text="text/javascript"></script>
+  <script>
+    var sakura = new Sakura('body', {
+      colors: [
+        {
+          gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+          gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+          gradientColorDegree: 120,
+        },
+        {
+          gradientColorStart: 'rgba(255,189,189)',
+          gradientColorEnd: 'rgba(227,170,181)',
+          gradientColorDegree: 120,
+        },
+        {
+          gradientColorStart: 'rgba(212,152,163)',
+          gradientColorEnd: 'rgba(242,185,196)',
+          gradientColorDegree: 120,
+        },
+      ],
+      delay: 500,
+    });
+  </script>
+
+  <!-- Text -->
+  <div class="svg-wrapper">
+    <svg height="60" width="700" xmlns="http://www.w3.org/2000/svg">
+      <rect class="shape" height="60" width="690" />
+      <div class="text"><a class="link">click here to be redirected to my portfolio</a>
+      </div>
+    </svg>
+  </div>
+
+
+  <!-- Flowers -->
+  <div id="flowers"><img
+      src="https://64.media.tumblr.com/52490b147ecb216d4e0957280c51a10b/0ca29372037d3aa0-32/s640x960/94c61d38ca81a673d42a61b5648ec424fde1d32e.png" />
+  </div>
+  <div id="flowers1"><img
+      src="https://64.media.tumblr.com/88d29bd18b8b43822b4e182ba7ba7c87/aa3ba789be6794d4-13/s540x810/92325aa14f7cbe99aa8027b614575fd9134b2e1a.png" />
+  </div>
+
+</body>
+
+</html>
